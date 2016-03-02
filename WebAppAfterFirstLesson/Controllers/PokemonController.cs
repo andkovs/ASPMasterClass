@@ -10,7 +10,7 @@ namespace WebAppAfterFirstLesson.Controllers
     public class PokemonController : Controller
     {
         // GET: Pokemon
-        public ActionResult Index()
+        public ActionResult Pokemon()
         {
             PokemonModels[] pokemons = {
                                            new PokemonModels{PokemonName="Pikachu", MasterName="Ash", PicUrl="pikachu.jpg"},
@@ -21,6 +21,11 @@ namespace WebAppAfterFirstLesson.Controllers
 
 
             return View(pokemons);
+        }
+
+        public ActionResult Team()
+        {
+            return View();
         }
     }
 }
